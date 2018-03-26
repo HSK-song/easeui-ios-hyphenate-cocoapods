@@ -12,7 +12,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "UIImageView+WebCache.h"
+#import <SDWebImage/SDImageCache.h>
 
 #import "EaseConversationListViewController.h"
 #import "EaseMessageViewController.h"
