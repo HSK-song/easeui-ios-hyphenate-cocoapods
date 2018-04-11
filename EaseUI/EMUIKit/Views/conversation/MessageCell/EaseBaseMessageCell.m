@@ -13,6 +13,7 @@
 #import "EaseBaseMessageCell.h"
 
 #import "UIImageView+WebCache.h"
+#import "EaseBundle.h"
 
 @interface EaseBaseMessageCell()
 
@@ -285,10 +286,10 @@
                     _hasRead.text = [NSString stringWithFormat:@"%@ 已读", @(self.model.dingReadCount)];
                 } else if (self.model.isMessageRead) {
                     _hasRead.hidden = NO;
-                    _hasRead.text = NSLocalizedString(@"hasRead", @"Read");
+                    _hasRead.text = [EaseBundle localizedStringForKey:@"hasRead"];
                 } else if (self.model.isDing) {
                     _hasRead.hidden = NO;
-                    _hasRead.text = [NSString stringWithFormat:@"%@ %@", @(self.model.dingReadCount), NSLocalizedString(@"hasRead", @"Read")];
+                    _hasRead.text = [NSString stringWithFormat:@"%@ %@", @(self.model.dingReadCount), [EaseBundle localizedStringForKey:@"hasRead"]];
                 }
             }
                 break;
