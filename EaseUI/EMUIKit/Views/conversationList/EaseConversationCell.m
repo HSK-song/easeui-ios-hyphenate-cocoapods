@@ -61,6 +61,10 @@ CGFloat const EaseConversationCellPadding = 10;
     return self;
 }
 
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    _avatarView.layer.cornerRadius = MIN(CGRectGetWidth(_avatarView.bounds), CGRectGetHeight(_avatarView.bounds))/2;
+}
 #pragma mark - private layout subviews
 
 /*!
@@ -75,6 +79,7 @@ CGFloat const EaseConversationCellPadding = 10;
 
     _avatarView = [[EaseImageView alloc] init];
     _avatarView.translatesAutoresizingMaskIntoConstraints = NO;
+    _avatarView.layer.masksToBounds = YES;
     [self.contentView addSubview:_avatarView];
     
     _timeLabel = [[UILabel alloc] init];
@@ -302,3 +307,4 @@ CGFloat const EaseConversationCellPadding = 10;
 }
 
 @end
+
