@@ -5,12 +5,12 @@ static NSString *BUNDLE_NAME = @"EaseUIResource";
 @implementation EaseBundle
 
 + (NSString *)localizedStringForKey:(NSString *)key {
-    NSBundle *bundle = [self _bundle];
+    NSBundle *bundle = [self bundle];
     
     return [bundle localizedStringForKey:key value:nil table:nil];
 }
 
-+ (NSBundle *)_bundle {
++ (NSBundle *)bundle {
     static NSBundle *bundle = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
