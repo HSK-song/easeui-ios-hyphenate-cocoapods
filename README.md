@@ -23,4 +23,4 @@
 		//引入头文件
 		#import <EaseUILite/EaseUI.h>
 
-3. when specific `use_framework!` in Podfile , `EaseUIResource.bundle` will be copied to framework, not main bundle. This will cause EaseUI crash when access image. In order to avoid crash, copy `EaseUIResource.bundle` to target mannully, cause i'm too lazy to modify 100+ occurance of the code.
+3. when specific `use_framework!` in Podfile, `EaseUIResource.bundle` will be copied to framework, not main bundle. This will cause EaseUI crash when access image. In order to avoid crash, copy `EaseUIResource.bundle` to target mannully, cause i'm too lazy to modify 100+ occurance of the code.
